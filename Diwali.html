@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Diwali Festival</title>
+        <script src="http://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <style>
+            .gift {
+                padding: 5px;
+                cursor: pointer;
+            }
+            .gift img {
+                height: 400px;
+                width: 400px;
+            }
+            .gift img.open {
+                height: 500px;
+                width: 70%;
+            }
+        </style>
+        <script>
+            $(document).ready(function() {
+                $('.gift').click(function() {
+                    $(this).find('img')
+                        .attr('src', 'open.webp')
+                        .addClass('open');
+
+                    $(this).off('click');
+                });
+            });
+        </script>
+    </head>
+    <body bgcolor="green">
+        <center>
+            <h1>Happy Diwali</h1>
+            <div class="gift">
+                <img src="gift.jpeg" alt="Gift Image">
+            </div>
+        </center>
+    </body>
+</html>
